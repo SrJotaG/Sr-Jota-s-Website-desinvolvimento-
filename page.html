@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<title>Conversor do YouTube para MP3 - GreenConvert</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="Converta vídeos do YouTube para MP3. As taxas de bits de MP3 disponíveis são 320kbps, 256kbps, 192kbps, 128kbps e 64kbps" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Conversor do YouTube para MP3 - GreenConvert" />
+<meta property="og:description" content="Converta vídeos do YouTube para MP3. As taxas de bits de MP3 disponíveis são 320kbps, 256kbps, 192kbps, 128kbps e 64kbps" />
+<meta property="og:image" content="https://greenconvert.net/images/logo.png" />
+<meta name="csrf-param" content="csrf_token_name">
+<meta name="csrf-token" content="TlRNeVkySmpNR1ZrTm1KaU5XRXdaakprTmpkaE5UTmlOamN4WXprd01qYz0=">
+<meta name="shareaholic:site_id" content="fff57103b99e8b08e6b3163fdc84c17f" />
+<link rel="canonical" href="https://greenconvert.net/pt6/youtube-mp3" />
+<link rel="stylesheet" type="text/css" href="https://greenconvert.net/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://greenconvert.net/css/fontawesome.min.css?v=5319">
+<link rel="stylesheet" type="text/css" href="https://greenconvert.net/css/style.css?v=1705915708">
+<link rel="apple-touch-icon" sizes="180x180" href="https://greenconvert.net/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://greenconvert.net/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://greenconvert.net/favicon-16x16.png">
+<link rel="manifest" href="https://greenconvert.net/site.webmanifest">
+</head>
+<body>
+<header>
+<div class="main_nav navbar navbar-expand-lg navbar-light" style>
+<div class="container">
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<a class="logo" href="https://greenconvert.net/pt6" style="color:black;"><span><strong class="green">Green</strong><strong class="convert">Convert</strong></span></a>
+<div class="language">
+<div class="tool"><img alt="flag" src="https://greenconvert.net/images/flags/pt.png"></div>
+<div class="sub-language">
+<ul class="sub_menu">
+<li><a data-lang="en" href="https://greenconvert.net/en7">English</a></li>
+<li><a data-lang="es" href="https://greenconvert.net/es6">Español</a></li>
+<li><a data-lang="id" href="https://greenconvert.net/id6">Indonesian</a></li>
+<li><a data-lang="it" href="https://greenconvert.net/it6">Italiano</a></li>
+<li><a data-lang="ja" href="https://greenconvert.net/ja6">日本語</a></li>
+<li><a data-lang="ko" href="https://greenconvert.net/ko6">한국어</a></li>
+<li><a data-lang="ph" href="https://greenconvert.net/ph6">Filipino</a></li>
+<li><a data-lang="pt" href="https://greenconvert.net/pt6">Português</a></li>
+<li><a data-lang="ru" href="https://greenconvert.net/ru6">Русский</a></li>
+<li><a data-lang="tr" href="https://greenconvert.net/tr6">Türkçe</a></li>
+<li><a data-lang="ar" href="https://greenconvert.net/ar6">العربية</a></li>
+</ul>
+</div>
+</div>
+<a class="theme" href="/theme/dark?r=pt6/youtube-mp3" rel="nofollow"><i class="fa fa-moon fa-lg" style="color: #5e5e5e"></i></a>
+</div>
+</div>
+<nav class="navbar-expand-lg navbar-light border-bottom" aria-label="navbar menu">
+<div id="navbar" class="collapse navbar-collapse justify-content-md-center">
+<ul class="nav navbar-nav">
+<li class="nav-item"><a href="https://greenconvert.net/pt6">Baixador do YouTube</a></li>
+<li class="nav-item"><a href="https://greenconvert.net/pt6/youtube-mp3" class="active">YouTube para MP3</a></li>
+<li class="nav-item"> <a href="https://greenconvert.net/pt6/youtube-mp4">YouTube para MP4</a></li>
+</ul>
+</div>
+</nav>
+</header>
+<main role="main">
+<section class="jumbotron text-center">
+<div class="container">
+<h1 class="title">Baixador de vídeo do <span class="green">YouTube</span></h1>
+<p class="lead text-muted">Baixe e salve vídeos do YouTube gratuitamente</p>
+<div class="input-group mb-3">
+<input name="videoUrl" id="videoUrl" type="text" class="form-control form-control-lg" placeholder="https://www.youtube.com/watch?v=_Yhyp-_hX2s" autocomplete="off" autofocus>
+<div class="input-group-append">
+<button type="button" class="btn btn-information btn-primary" id="videoDetailButton"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+</div>
+</div>
+<div id="errorVideoAlertBox" class="alert alert-danger" role="alert" style="display:none;"></div>
+<div class="block-txt-sm pc-sm float-left">
+<p class="block-txt-sm pc-sm ">Ao usar nosso serviço, você aceita nossos <a href="https://greenconvert.net/pt/terms-of-use">Termos de Serviço</a></p>
+</div>
+<div class="clearfix"></div>
+<div id="content" class="wapper" style="display:none;">
+<hr>
+<div class="progress alt h-25" id="videoDetailLoading" style="display:none;margin-bottom: 15px;">
+<div id="dynamic" class="progress-bar progress-bar-success progress-bar-striped progress-bar-animated active p2" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+<span id="current-progress"></span>
+</div>
+</div>
+<div class="card mb-3" id="videoDetail" style="display:none;">
+<div class="row no-gutters" id="row-no-gutters">
+<div class="col-md-4">
+<img src class="card-img" id="videoImageUrl" style="height: 100%;">
+</div>
+<div class="col-md-7">
+<div class="card-body">
+<h5 class="card-title" id="videoTitle"></h5>
+<p class="card-text">
+<div class="input-group mb-2">
+<select class="custom-select" id="downloadFormat">
+<option>Escolha o formato...</option>
+<optgroup label="MP3 (Áudio)" id="audio_mp3"></optgroup>
+</select>
+<div class="input-group-append">
+<button class="btn input-group-text" id="download"><i class="fa fa-check" aria-hidden="true" style="color:#00b887;"></i></button>
+</div>
+</div>
+</p>
+<a type="button" href="javascript:void();" class="btn btn-primary" id="downloadButton" style="display:none;"><i class="fa fa-download" aria-hidden="true"></i> Baixe Agora</a>
+<div class="progress alt h-25" id="convertLoading" style="display:none;">
+<div id="dynamic" class="progress-bar progress-bar-success progress-bar-striped  progress-bar-animated active p-2" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+<span id="current-progress"></span>
+</div>
+</div>
+<p class="card-text"><small class="text-muted" id="videoAuthorName"></small></p>
+</div>
+</div>
+<div class="col-md-1">
+<div class="shareaholic-canvas" data-app="share_buttons" data-app-id="33160251"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="save-video-online">
+<div class="container">
+<h2 class="ttl-comp03">Como baixar o vídeo do YouTube online?</h2>
+<p>Você pode baixar facilmente vídeos do YouTube online em 3 etapas:</p>
+<div class="block-slide">
+<div class="slick-slide">
+<div class="item">
+<div class="item-img"><i class="ico ico-copy"></i></div>
+<div class="item-ttl"><strong>Etapa 1:</strong></div>
+<div class="item-txt">Copie o URL do vídeo do YouTube que você precisa baixar.</div>
+</div>
+</div>
+<div class="slick-slide">
+<div class="item">
+<div class="item-img"><i class="ico ico-clicking"></i></div>
+<div class="item-ttl"><strong>Etapa 2:</strong></div>
+<div class="item-txt">Cole o URL no campo Pesquisar e clique no botão "<strong class="fa fa-arrow-right"></strong>" para iniciar o processo de conversão.</div>
+</div>
+</div>
+<div class="slick-slide">
+<div class="item">
+<div class="item-img"><i class="ico ico-download-cloud"></i></div>
+<div class="item-ttl"><strong>Etapa 3:</strong></div>
+<div class="item-txt">Escolha a taxa de bits <strong>MP3</strong> ou a qualidade <strong>MP4</strong> para fazer o download do arquivo em seus dispositivos.</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<hr class="common-line" />
+<section class="web-intro">
+<div class="container">
+<h2 class="ttl-comp03">Por que usar o Baixador do YouTube <span><strong class="green">Green</strong><strong class="convert">Convert</strong></span>?</h2>
+<p>Recursos que nos diferenciam de outros baixadores do YouTube:</p>
+<div class="row list-highlight">
+<div class="col-md-4">
+<div class="item">
+<div class="item-img"><i class="ico ico-wall-clock"></i></div>
+<h3 class="item-ttl">Rapidamente e Facilmente</h3>
+<p class="item-txt">Você pode copiar a URL do vídeo do YouTube e colar no campo Pesquisar, escolher o formato que deseja baixar.</p>
+</div>
+</div>
+<div class="col-md-4">
+<div class="item">
+<div class="item-img"><i class="ico ico-video"></i></div>
+<h3 class="item-ttl">Suporta vários formatos e qualidades de arquivo</h3>
+<p class="item-txt"><strong><span class="green">Green</span>Convert</strong> suporta o download de todos os formatos: mp4, webm, mp3, m4a em qualquer qualidade: 240p, 360p, 480p, 710p, 1080p.</p>
+</div>
+</div>
+<div class="col-md-4">
+<div class="item">
+<div class="item-img"><i class="ico ico-shield"></i></div>
+<h3 class="item-ttl">Sempre seguro e grátis</h3>
+<p class="item-txt"><strong><span class="green">Green</span>Convert</strong> é sempre GRATUITO. Tudo que você precisa é de um navegador da web e uma conexão com a Internet para baixar o vídeo. Além disso, você não pode registrar uma conta.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<hr class="common-line" />
+<section class="common-question" itemscope itemtype="https://schema.org/FAQPage">
+<div class="container">
+<h2 class="ttl-comp03">FAQ</h2>
+<p>Problemas comuns com o download de vídeo e áudio do YouTube usando <strong><span class="green">Green</span>Convert</strong></p>
+<div class="listuse" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<a data-toggle="collapse" href="#collapseOne" class="accordion collapsed" aria-expanded="true" aria-controls="collapseOne"><span itemprop="name">Como faço para baixar vídeos do YouTube para o meu computador?</span></a>
+<div id="collapseOne" class="collapse" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+<div class="card-deck intro">
+<div class="card">
+<p><b class="step">Etapa 1:</b></p>
+<p>Acesse o Youtube em seu navegador, encontre o vídeo que deseja baixar e copie o URL do vídeo do YouTube</p>
+</div>
+<div class="card">
+<p><b class="step">Etapa 2:</b></p>
+<p>Cole o URL do vídeo do YouTube na caixa de pesquisa "<strong><span class="green ">green</span>convert.net</strong>" e pressione "<strong class="fa fa-arrow-right"></strong>" e espere um momento</p>
+</div>
+<div class="card">
+<p><b class="step">Etapa 3:</b></p>
+<p>Selecione o formato de áudio / vídeo que deseja baixar e pressione o botão "<strong>Baixar agora</strong>".</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="listuse" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<a data-toggle="collapse" href="#collapseTwo" class="accordion collapsed" aria-expanded="true" aria-controls="collapseTwo"><span itemprop="name">Como faço para baixar vídeos do YouTube para Android?</span></a>
+<div id="collapseTwo" class="collapse" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+<div class="card-deck intro mb-4">
+<div class="card">
+<p><b class="step">Etapa 1:</b></p>
+<p>Abra o aplicativo do YouTube e encontre o vídeo que deseja baixar.</p>
+</div>
+<div class="card">
+<p><b class="step">Etapa 2:</b></p>
+<p>Reproduza o vídeo e toque no botão "<strong>Compartilhar</strong>".</p>
+</div>
+<div class="card">
+<p><b class="step">Etapa 3:</b></p>
+<p>Toque em "<strong>Copiar</strong>" no menu de compartilhamento.</p>
+</div>
+</div>
+<div class="card-deck intro">
+<div class="card">
+<p><b class="step">Etapa 4:</b></p>
+<p>Abra seu navegador da web e acesse "<strong><span class="green">green</span>convert.net</strong>", cole o link do YouTube na caixa de pesquisa e pressione "<strong class="fa fa-arrow-right"></strong>" botão.</p>
+</div>
+<div class="card">
+<p><b class="step">Etapa 5:</b></p>
+<p>Selecione o formato de áudio / vídeo que deseja baixar e pressione o botão "<strong>Baixar agora</strong>".</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="listuse" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<a data-toggle="collapse" href="#collapseThree" class="accordion collapsed" aria-expanded="true" aria-controls="collapseThree"><span itemprop="name">Como faço para baixar vídeos do YouTube para o iPhone?</span></a>
+<div id="collapseThree" class="collapse " itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+<div class="card-deck intro mb-4">
+<div class="card">
+<p><b class="step">Etapa 1:</b></p>
+<p>Instale o aplicativo "<strong>Documentos por Readdle</strong>" em seu iPhone</p>
+</div>
+<div class="card">
+<p><b class="step">Etapa 2:</b></p>
+<p>Abra Documentos pelo aplicativo Readdle e toque no ícone do navegador da web no canto inferior direito do aplicativo (como o ícone do navegador Safari). Em seguida, digite "<strong><span class="green">green</span>convert.net</strong>" e pressione "<strong class="fa fa-arrow-right"></strong>"</p>
+</div>
+</div>
+<div class="card-deck intro">
+<div class="card">
+<p><b class="step">Etapa 3:</b></p>
+<p>Insira ou cole o URL do vídeo do YouTube que deseja baixar na caixa de pesquisa e pressione o botão "<strong class="fa fa-arrow-right"></strong>".</p>
+</div>
+<div class="card">
+<p><b class="step">Etapa 4:</b></p>
+<p>Selecione o formato de áudio / vídeo que deseja baixar e pressione o botão "<strong>Baixar agora</strong>".</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="listuse" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<a data-toggle="collapse" href="#collapseFive" class="accordion collapsed" aria-expanded="true" aria-controls="collapseFive"><span itemprop="name">Onde os downloads do Youtube são armazenados?</span></a>
+<div id="collapseFive" class="collapse " itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+<div class="card-deck intro mb-4">
+<div class="card">
+<p>Os arquivos baixados são salvos automaticamente na pasta Downloads do seu PC. Você pode encontrar seus downloads em seu dispositivo Android em seu aplicativo Meus Arquivos (denominado Gerenciador de Arquivos em alguns telefones). No iPhone, você também pode usar o aplicativo Arquivos para localizar e abrir arquivos baixados.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+</main>
+<footer id="footer">
+<div class="container">
+<a class="logo" href="https://greenconvert.net/pt6" style="color:black;"><span><strong class="green">Green</strong><strong class="convert">Convert</strong></span></a>
+<ul class="list">
+<li><a href="https://greenconvert.net/pt/privacy-policy">Política de Privacidade</a></li>
+<li><a href="https://greenconvert.net/pt/terms-of-use">Termos de uso</a></li>
+<li><a href="https://greenconvert.net/pt/contact">Contato</a></li>
+</ul>
+<p class="copyright">Direito autoral &copy; 2021-2024 - greenconvert.net</p>
+</div>
+</footer>
+<script src="https://greenconvert.net/js/jquery-3.4.1.min.js" type="513fbde8d07c3cc3fc89daab-text/javascript"></script>
+<script src="https://greenconvert.net/js/fad58de7366495db4650cfefac2fcd61-pt.js?v=1705915708" type="513fbde8d07c3cc3fc89daab-text/javascript"></script>
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="513fbde8d07c3cc3fc89daab-|49" defer></script></body>
+</html>
